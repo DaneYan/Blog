@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dane</title>
+        
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                Dane
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../index.html">1</a></li><li><a href="../html/2.组长操作.html">2.组长操作</a></li><li><a href="../html/A.git.html">A.git</a></li><li class="active"><a href="../html/angular.html">angular</a></li><li><a href="../html/CA.nodestart.html">CA.nodestart</a></li><li><a href="../html/CB. webstorm.html">CB. webstorm</a></li><li><a href="../html/Changelog.html">Changelog</a></li><li><a href="../html/D. nodebasic.html">D. nodebasic</a></li><li><a href="../html/E.global.html">E.global</a></li><li><a href="../html/F.module.html">F.module</a></li><li><a href="../html/G.buffer.html">G.buffer</a></li><li><a href="../html/H.file.html">H.file</a></li><li><a href="../html/IB.html">IB</a></li><li><a href="../html/J.event.html">J.event</a></li><li><a href="../html/K.stream.html">K.stream</a></li><li><a href="../html/LA.http.html">LA.http</a></li><li><a href="../html/LB.ajax.html">LB.ajax</a></li><li><a href="../html/LC.jsonp.html">LC.jsonp</a></li><li><a href="../html/LD.cross.html">LD.cross</a></li><li><a href="../html/LE.http.html">LE.http</a></li><li><a href="../html/question.html">question</a></li><li><a href="../html/readMe.html">readMe</a></li><li><a href="../html/笔记 .html">笔记 </a></li><li><a href="../html/笔记.html">笔记</a></li></ul>    
+        </div>
+        
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0ng-app 告诉angular启动应用">ng-app 告诉angular启动应用</a></li><li><a href="#t1ng-model 实现数据绑定">ng-model 实现数据绑定</a></li><li><a href="#t2{{}}">{{}}</a></li><li><a href="#t3ng-bind 防止页面闪烁">ng-bind 防止页面闪烁</a></li><li><a href="#t4ng-init 初始化数据">ng-init 初始化数据</a></li><li><a href="#t5ng-repeat 可以遍历对象数组">ng-repeat 可以遍历对象数组</a></li><li><a href="#t6ng-click">ng-click</a></li><li><a href="#t7ng-hide/ng-show/ng-if">ng-hide/ng-show/ng-if</a></li><li><a href="#t8ng-switch/ng-switch-when/ng-switch-default">ng-switch/ng-switch-when/ng-switch-default</a></li><li><a href="#t9ng-class">ng-class</a></li><li><a href="#t10include引入页面">include引入页面</a></li><li><a href="#t11过滤器">过滤器</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0ng-app &#x544A;&#x8BC9;angular&#x542F;&#x52A8;&#x5E94;&#x7528;">ng-app &#x544A;&#x8BC9;angular&#x542F;&#x52A8;&#x5E94;&#x7528; <a href="#t0ng-app &#x544A;&#x8BC9;angular&#x542F;&#x52A8;&#x5E94;&#x7528;"> # </a></h1>
+<h1 id="t1ng-model &#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7ED1;&#x5B9A;">ng-model &#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7ED1;&#x5B9A; <a href="#t1ng-model &#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7ED1;&#x5B9A;"> # </a></h1>
+<h1 id="t2{{}}">{{}} <a href="#t2{{}}"> # </a></h1>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x53D6;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x8FDB;&#x884C;&#x4E09;&#x5143;&#x8868;&#x8FBE;&#x5F0F;</li>
+<li>&#x83B7;&#x53D6;&#x8BA1;&#x7B97;&#x540E;&#x7684;&#x503C;{{sum()}}<h1 id="t3ng-bind &#x9632;&#x6B62;&#x9875;&#x9762;&#x95EA;&#x70C1;">ng-bind &#x9632;&#x6B62;&#x9875;&#x9762;&#x95EA;&#x70C1; <a href="#t3ng-bind &#x9632;&#x6B62;&#x9875;&#x9762;&#x95EA;&#x70C1;"> # </a></h1>
+</li>
+<li>ng-non-bindable &#x8BA9;{{}}&#x6B63;&#x5E38;&#x663E;&#x793A;&#x51FA;&#x6765;</li>
+<li>ng-bind-template=&quot;{{name}} {{age}}&quot;&#x7ED1;&#x5B9A;&#x591A;&#x4E2A;&#x53D8;&#x91CF;<h1 id="t4ng-init &#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;">ng-init &#x521D;&#x59CB;&#x5316;&#x6570;&#x636E; <a href="#t4ng-init &#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;"> # </a></h1>
+<h1 id="t5ng-repeat &#x53EF;&#x4EE5;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;">ng-repeat &#x53EF;&#x4EE5;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x6570;&#x7EC4; <a href="#t5ng-repeat &#x53EF;&#x4EE5;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;"> # </a></h1>
+</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;unique &#x6211;&#x4EEC;&#x5C31;&#x8981;&#x4F7F;&#x7528;trackby &#x8FDB;&#x884C;&#x6839;&#x636E;&#x54EA;&#x4E2A;&#x904D;&#x5386;<h1 id="t6ng-click">ng-click <a href="#t6ng-click"> # </a></h1>
+</li>
+<li>angular&#x4E2D;&#x7684;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;<h1 id="t7ng-hide/ng-show/ng-if">ng-hide/ng-show/ng-if <a href="#t7ng-hide/ng-show/ng-if"> # </a></h1>
+</li>
+<li>hide/show&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x7684;css&#x53D8;&#x5316;</li>
+<li>ng-cloak &#x89E3;&#x51B3;&#x95EA;&#x70C1;&#x95EE;&#x9898;<h1 id="t8ng-switch/ng-switch-when/ng-switch-default">ng-switch/ng-switch-when/ng-switch-default <a href="#t8ng-switch/ng-switch-when/ng-switch-default"> # </a></h1>
+<h1 id="t9ng-class">ng-class <a href="#t9ng-class"> # </a></h1>
+</li>
+<li>{true:&apos;&#x6837;&#x5F0F;&#x540D;&#x5B57;&apos;,false:&apos;&#x6837;&#x5F0F;&#x540D;&#x5B57;&apos;}[model&#x4E0A;&#x7684;&#x5C5E;&#x6027;]</li>
+<li>{&apos;&#x6837;&#x5F0F;&#x540D;&#x5B57;&apos;:&apos;model&#x4E0A;&#x7684;&#x5C5E;&#x6027;&apos;}</li>
+<li>ng-class=&quot;model&#x4E0A;&#x7684;&#x5C5E;&#x6027;&quot;;<h1 id="t10include&#x5F15;&#x5165;&#x9875;&#x9762;">include&#x5F15;&#x5165;&#x9875;&#x9762; <a href="#t10include&#x5F15;&#x5165;&#x9875;&#x9762;"> # </a></h1>
+<h1 id="t11&#x8FC7;&#x6EE4;&#x5668;">&#x8FC7;&#x6EE4;&#x5668; <a href="#t11&#x8FC7;&#x6EE4;&#x5668;"> # </a></h1>
+</li>
+<li>filter</li>
+<li>orderBy</li>
+<li>json</li>
+<li>number</li>
+<li>currency</li>
+<li>uppercase/lowercase</li>
+<li>date</li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+
+</div>
+
+<style>
+    .page-toc{
+        overflow: hidden;
+        position:fixed;
+        left:50%;
+        margin-left:250px;
+	width:350px
+    }
+    .page-toc > ul li{
+        list-style-position: inside;
+	line-height:120%
+    }
+    .page-toc > ul{
+        transition: all 0.2s;
+        position: relative;
+    }
+    .page-toc > ul a {
+	color:#009a61;
+	font-size:110% ! important;
+	line-height:120%
+    }
+    .page-toc > ul .red{
+        background: #f3f3f3;
+        z-index: 1;
+        border-left: 3px solid #009a61;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+	color:#000
+    }
+
+    .markdown-body{
+	font-size: 120% ! important;
+        max-width:800px;
+    }
+    .container{
+       font-size: 110% ! important;
+    }
+    html,body,.container{
+      font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif ! important;
+    }
+    .markdown-body pre code{
+        font-size: 20px;
+        line-height: 24px;
+    }
+</style>
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<script>
+
+var bar = $(window).height() - $('.navbar ').height() - $('.page-toc').position().top;
+var count =  bar/26/2;
+var barHeight = $('.page-toc').outerHeight();
+$('.page-toc li').eq(0).children('a').addClass('red');
+var arr = [];
+$("h2,h3").each(function () {
+    arr.push($(this).position().top);
+});
+if(!($(window).height()-50 > barHeight)){
+    var flagTop = true;
+}
+function dark(){
+    var top =  Math.abs($('.page-toc > ul').position().top);
+    var cur = $(document).scrollTop();
+    for(var i = arr.length; i >=0;i--){
+        if(arr[i]<=cur){
+            break;
+        }
+    }
+    if(i===-1){
+        i = 0;
+    }
+    $('.page-toc li a').removeClass('red');
+    $('.page-toc li').eq(i).children('a').addClass('red');
+    if(flagTop){
+      if(i> arr.length-count){
+          $(' .page-toc > ul').css('top',-(barHeight-bar));
+          return;
+      }
+      if(i>count){
+          $(' .page-toc > ul').css('top',-26*(i-count));
+      }else{
+          $(' .page-toc > ul').css('top',0);
+      }
+    }
+}
+$(window).on('scroll',dark);
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dane</title>
+        
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                Dane
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../index.html">1</a></li><li><a href="../html/2.组长操作.html">2.组长操作</a></li><li><a href="../html/A.git.html">A.git</a></li><li><a href="../html/angular.html">angular</a></li><li><a href="../html/CA.nodestart.html">CA.nodestart</a></li><li><a href="../html/CB. webstorm.html">CB. webstorm</a></li><li><a href="../html/Changelog.html">Changelog</a></li><li><a href="../html/D. nodebasic.html">D. nodebasic</a></li><li><a href="../html/E.global.html">E.global</a></li><li><a href="../html/F.module.html">F.module</a></li><li><a href="../html/G.buffer.html">G.buffer</a></li><li><a href="../html/H.file.html">H.file</a></li><li><a href="../html/IB.html">IB</a></li><li><a href="../html/J.event.html">J.event</a></li><li><a href="../html/K.stream.html">K.stream</a></li><li><a href="../html/LA.http.html">LA.http</a></li><li><a href="../html/LB.ajax.html">LB.ajax</a></li><li><a href="../html/LC.jsonp.html">LC.jsonp</a></li><li><a href="../html/LD.cross.html">LD.cross</a></li><li><a href="../html/LE.http.html">LE.http</a></li><li><a href="../html/question.html">question</a></li><li class="active"><a href="../html/readMe.html">readMe</a></li><li><a href="../html/笔记 .html">笔记 </a></li><li><a href="../html/笔记.html">笔记</a></li></ul>    
+        </div>
+        
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0jQuery">jQuery</a><ul><li><a href="#t1Including jQuery">Including jQuery</a><ul><li><a href="#t2Browser">Browser</a><ul><li><a href="#t3Script tag">Script tag</a></li><li><a href="#t4Babel">Babel</a></li><li><a href="#t5Browserify/Webpack">Browserify/Webpack</a></li><li><a href="#t6AMD (Asynchronous Module Definition)">AMD (Asynchronous Module Definition)</a></li></ul></li><li><a href="#t7Node">Node</a></li></ul></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0jQuery">jQuery <a href="#t0jQuery"> # </a></h1>
+<blockquote>
+<p>jQuery is a fast, small, and feature-rich JavaScript library.</p>
+</blockquote>
+<p>For information on how to get started and how to use jQuery, please see <a href="http://api.jquery.com/">jQuery&apos;s documentation</a>.
+For source files and issues, please visit the <a href="https://github.com/jquery/jquery">jQuery repo</a>.</p>
+<h2 id="t1Including jQuery">Including jQuery <a href="#t1Including jQuery"> # </a></h2>
+<p>Below are some of the most common ways to include jQuery.</p>
+<h3 id="t2Browser">Browser <a href="#t2Browser"> # </a></h3>
+<h4 id="t3Script tag">Script tag <a href="#t3Script tag"> # </a></h4>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;https://code.jquery.com/jquery-2.2.0.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<h4 id="t4Babel">Babel <a href="#t4Babel"> # </a></h4>
+<p><a href="http://babeljs.io/">Babel</a> is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> $ from <span class="hljs-string">&quot;jquery&quot;</span>;
+</code></pre>
+<h4 id="t5Browserify/Webpack">Browserify/Webpack <a href="#t5Browserify/Webpack"> # </a></h4>
+<p>There are several ways to use <a href="http://browserify.org/">Browserify</a> and <a href="https://webpack.github.io/">Webpack</a>. For more information on using these tools, please refer to the corresponding project&apos;s documention. In the script, including jQuery will usually look like this...</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;jquery&quot;</span>);
+</code></pre>
+<h4 id="t6AMD (Asynchronous Module Definition)">AMD (Asynchronous Module Definition) <a href="#t6AMD (Asynchronous Module Definition)"> # </a></h4>
+<p>AMD is a module format built for the browser. For more information, we recommend <a href="http://requirejs.org/docs/whyamd.html">require.js&apos; documentation</a>.</p>
+<pre><code class="lang-js">define([<span class="hljs-string">&quot;jquery&quot;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$</span>) </span>{
+
+});
+</code></pre>
+<h3 id="t7Node">Node <a href="#t7Node"> # </a></h3>
+<p>To include jQuery in <a href="nodejs.org">Node</a>, first install with npm.</p>
+<pre><code class="lang-sh">npm install jquery
+</code></pre>
+<p>For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as <a href="https://github.com/tmpvar/jsdom">jsdom</a>. This can be useful for testing purposes.</p>
+<pre><code class="lang-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;jsdom&quot;</span>).env(<span class="hljs-string">&quot;&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, window</span>) </span>{
+    <span class="hljs-keyword">if</span> (err) {
+        <span class="hljs-built_in">console</span>.error(err);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">var</span> $ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;jquery&quot;</span>)(<span class="hljs-built_in">window</span>);
+});
+</code></pre>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+
+</div>
+
+<style>
+    .page-toc{
+        overflow: hidden;
+        position:fixed;
+        left:50%;
+        margin-left:250px;
+	width:350px
+    }
+    .page-toc > ul li{
+        list-style-position: inside;
+	line-height:120%
+    }
+    .page-toc > ul{
+        transition: all 0.2s;
+        position: relative;
+    }
+    .page-toc > ul a {
+	color:#009a61;
+	font-size:110% ! important;
+	line-height:120%
+    }
+    .page-toc > ul .red{
+        background: #f3f3f3;
+        z-index: 1;
+        border-left: 3px solid #009a61;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+	color:#000
+    }
+
+    .markdown-body{
+	font-size: 120% ! important;
+        max-width:800px;
+    }
+    .container{
+       font-size: 110% ! important;
+    }
+    html,body,.container{
+      font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif ! important;
+    }
+    .markdown-body pre code{
+        font-size: 20px;
+        line-height: 24px;
+    }
+</style>
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<script>
+
+var bar = $(window).height() - $('.navbar ').height() - $('.page-toc').position().top;
+var count =  bar/26/2;
+var barHeight = $('.page-toc').outerHeight();
+$('.page-toc li').eq(0).children('a').addClass('red');
+var arr = [];
+$("h2,h3").each(function () {
+    arr.push($(this).position().top);
+});
+if(!($(window).height()-50 > barHeight)){
+    var flagTop = true;
+}
+function dark(){
+    var top =  Math.abs($('.page-toc > ul').position().top);
+    var cur = $(document).scrollTop();
+    for(var i = arr.length; i >=0;i--){
+        if(arr[i]<=cur){
+            break;
+        }
+    }
+    if(i===-1){
+        i = 0;
+    }
+    $('.page-toc li a').removeClass('red');
+    $('.page-toc li').eq(i).children('a').addClass('red');
+    if(flagTop){
+      if(i> arr.length-count){
+          $(' .page-toc > ul').css('top',-(barHeight-bar));
+          return;
+      }
+      if(i>count){
+          $(' .page-toc > ul').css('top',-26*(i-count));
+      }else{
+          $(' .page-toc > ul').css('top',0);
+      }
+    }
+}
+$(window).on('scroll',dark);
+</script>
+</body>
+</html>

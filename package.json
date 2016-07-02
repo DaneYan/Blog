@@ -1,0 +1,44 @@
+{
+    "name": "Dane",
+    "version": "0.0.1",
+    "description": "",
+    "keywords": [
+        ""
+    ],
+    "homepage": "http://JSLite.io",
+    "author": "DaneYan <540726833@qq.com>",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "licenses": "MIT",
+    "idoc": {
+        "theme": "blog",
+        "md": [
+            "1.md",
+            "2.组长操作.md",
+            "A.git.md",
+            "angular.md",
+            "CA.nodestart.md",
+            "CB. webstorm.md",
+            "Changelog.md",
+            "D. nodebasic.md",
+            "E.global.md",
+            "F.module.md",
+            "G.buffer.md",
+            "H.file.md",
+            "IB.md",
+            "J.event.md",
+            "K.stream.md",
+            "LA.http.md",
+            "LB.ajax.md",
+            "LC.jsonp.md",
+            "LD.cross.md",
+            "LE.http.md",
+            "question.md",
+            "readMe.md",
+            "笔记 .md",
+            "笔记.md"
+        ]
+    }
+}

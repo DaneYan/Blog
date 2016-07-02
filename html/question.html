@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dane</title>
+        
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-line">
+    <div class="container">
+        <div class="logo">
+            
+                Dane
+            
+        </div>
+        <input type="checkbox" id="idoc_nav" />
+        <div class="menu_tree">
+        <ul><li><a href="../index.html">1</a></li><li><a href="../html/2.组长操作.html">2.组长操作</a></li><li><a href="../html/A.git.html">A.git</a></li><li><a href="../html/angular.html">angular</a></li><li><a href="../html/CA.nodestart.html">CA.nodestart</a></li><li><a href="../html/CB. webstorm.html">CB. webstorm</a></li><li><a href="../html/Changelog.html">Changelog</a></li><li><a href="../html/D. nodebasic.html">D. nodebasic</a></li><li><a href="../html/E.global.html">E.global</a></li><li><a href="../html/F.module.html">F.module</a></li><li><a href="../html/G.buffer.html">G.buffer</a></li><li><a href="../html/H.file.html">H.file</a></li><li><a href="../html/IB.html">IB</a></li><li><a href="../html/J.event.html">J.event</a></li><li><a href="../html/K.stream.html">K.stream</a></li><li><a href="../html/LA.http.html">LA.http</a></li><li><a href="../html/LB.ajax.html">LB.ajax</a></li><li><a href="../html/LC.jsonp.html">LC.jsonp</a></li><li><a href="../html/LD.cross.html">LD.cross</a></li><li><a href="../html/LE.http.html">LE.http</a></li><li class="active"><a href="../html/question.html">question</a></li><li><a href="../html/readMe.html">readMe</a></li><li><a href="../html/笔记 .html">笔记 </a></li><li><a href="../html/笔记.html">笔记</a></li></ul>    
+        </div>
+        
+        
+
+        <section class="idoc_nav_btn">
+            <label for="idoc_nav"><span></span></label>
+        </section>
+    </div>
+    
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0同步和异步 阻塞与非阻塞 是什么区别和联系">同步和异步 阻塞与非阻塞 是什么区别和联系</a></li><li><a href="#t1--save --save-dev">--save --save-dev</a></li><li><a href="#t2本地安装和全局安装">本地安装和全局安装</a></li><li><a href="#t3Max-Age">Max-Age</a></li><li><a href="#t4为什么需要用etag">为什么需要用etag</a></li><li><a href="#t5etag">etag</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t0&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65; &#x963B;&#x585E;&#x4E0E;&#x975E;&#x963B;&#x585E; &#x662F;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB;">&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65; &#x963B;&#x585E;&#x4E0E;&#x975E;&#x963B;&#x585E; &#x662F;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB; <a href="#t0&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65; &#x963B;&#x585E;&#x4E0E;&#x975E;&#x963B;&#x585E; &#x662F;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x548C;&#x8054;&#x7CFB;"> # </a></h2>
+<h2 id="t1--save --save-dev">--save --save-dev <a href="#t1--save --save-dev"> # </a></h2>
+<p>--save
+&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4F9D;&#x8D56;&#xFF0C;&#x7EBF;&#x4E0A;&#x73AF;&#x5883;&#x4F9D;&#x8D56;
+--save-dev
+&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x4F9D;&#x8D56;</p>
+<h2 id="t2&#x672C;&#x5730;&#x5B89;&#x88C5;&#x548C;&#x5168;&#x5C40;&#x5B89;&#x88C5;">&#x672C;&#x5730;&#x5B89;&#x88C5;&#x548C;&#x5168;&#x5C40;&#x5B89;&#x88C5; <a href="#t2&#x672C;&#x5730;&#x5B89;&#x88C5;&#x548C;&#x5168;&#x5C40;&#x5B89;&#x88C5;"> # </a></h2>
+<p>&#x672C;&#x5730;&#x5B89;&#x88C5;
+&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4EE3;&#x7801;&#x91CC;require&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x672C;&#x5730;&#x5B89;&#x88C5;</p>
+<p>&#x5168;&#x5C40;&#x5B89;&#x88C5;
+&#x5982;&#x679C;&#x4F60;&#x8981;&#x5728;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x5168;&#x5C40;&#x5B89;&#x88C5;
+&#x67E5;&#x770B;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x8DEF;&#x5F84; </p>
+<pre><code>npm root -g
+C:\Users\Administrator\AppData\Roaming\npm\node_modules
+</code></pre><p>npm install mime -g 
+&#x6709;&#x4E24;&#x4E2A;&#x529F;&#x80FD;</p>
+<ol>
+<li>&#x4F1A;&#x628A;&#x6B64;&#x6A21;&#x5757;&#x5B89;&#x88C5;&#x5230;npm\node_modules\mime&#x4E0B;&#x9762;</li>
+<li>&#x4F1A;&#x5728;npm&#x4E0B;&#x9762;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#xFF0C;&#x6216;&#x8005;&#x53EB;&#x53EF;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x6307;&#x5411;</li>
+</ol>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x88C5;&#x5168;&#x5C40;
+&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x901A;&#x8FC7;require&#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x88C5;&#x672C;&#x5730;</p>
+<p>&#x5207;&#x6362;&#x76D8;&#x7B26; &#x7528;  d:
+&#x5728;&#x76D8;&#x4E0B;&#x9762;&#x5207;&#x6362;&#x8DEF;&#x5F84;  cd ..   .   abc</p>
+<h1 id="t3Max-Age">Max-Age <a href="#t3Max-Age"> # </a></h1>
+<ol>
+<li>&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE; Cache-Control Max-Age= 30</li>
+<li>&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x54CD;&#x5E94;&#x540E;&#xFF0C;&#x4F1A;&#x628A;&#x6B64;&#x6587;&#x4EF6;&#x7F13;&#x5B58;&#x5728;&#x672C;&#x5730;&#x786C;&#x76D8;&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x679C;&#x518D;&#x6B21;&#x8BF7;&#x6C42;&#x5BF9;&#x5E94;&#x8D44;&#x6E90;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x6B64;&#x7F13;&#x5B58;&#x6CA1;&#x6709;&#x8FC7;&#x671F;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x518D;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x8BF7;&#x6C42;</li>
+</ol>
+<p>stat
+mtime modify time &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;
+ctime change time &#x6700;&#x540E;&#x6539;&#x53D8;&#x65F6;&#x95F4;
+brithtime &#x521B;&#x5EFA;&#x65F6;&#x95F4;
+atime access time &#x6700;&#x540E;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;</p>
+<p>&#x5237;&#x65B0;&#x6309;&#x94AE;
+&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x7BA1;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x8FC7;&#x671F;&#xFF0C;&#x90FD;&#x4F1A;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x8BE2;&#x95EE;&#x6B64;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x662F;&#x6700;&#x65B0;&#x7684;
+&#x76F4;&#x63A5;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;
+&#x5982;&#x679C;&#x7F13;&#x5B58;&#x672A;&#x8FC7;&#x671F;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x8FC7;&#x671F;&#xFF0C;&#x5219;&#x8BE2;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x6B64;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x53EF;&#x7528;
+ctrl+f5 
+&#x4F1A;&#x5FFD;&#x7565;&#x6240;&#x6709;&#x7F13;&#x5B58;</p>
+<h1 id="t4&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x7528;etag">&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x7528;etag <a href="#t4&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x7528;etag"> # </a></h1>
+<ol>
+<li>&#x4E0D;&#x591F;&#x7CBE;&#x786E; &#x53EA;&#x80FD;&#x7CBE;&#x786E;&#x5230;&#x79D2;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x79D2;&#x53D8;&#x597D;&#x51E0;&#x6B21;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x51FA;&#x73B0;&#x8BEF;&#x5DEE;</li>
+<li>&#x5982;&#x679C;&#x6709;CDN content distribution network</li>
+</ol>
+<h1 id="t5etag">etag <a href="#t5etag"> # </a></h1>
+<p>#&#x7F16;&#x7801;
+&#x5728;node&#x4E2D;&#x6307;&#x5B9A;&#x7F16;&#x7801;&#x8981;&#x5199;&#x6210; utf8
+&#x5728;&#x7F51;&#x9875;&#x4E2D;&#x6307;&#x5B9A;&#x7F16;&#x7801;&#x8981;&#x5199;&#x5165; utf-8</p>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+
+</div>
+
+<style>
+    .page-toc{
+        overflow: hidden;
+        position:fixed;
+        left:50%;
+        margin-left:250px;
+	width:350px
+    }
+    .page-toc > ul li{
+        list-style-position: inside;
+	line-height:120%
+    }
+    .page-toc > ul{
+        transition: all 0.2s;
+        position: relative;
+    }
+    .page-toc > ul a {
+	color:#009a61;
+	font-size:110% ! important;
+	line-height:120%
+    }
+    .page-toc > ul .red{
+        background: #f3f3f3;
+        z-index: 1;
+        border-left: 3px solid #009a61;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+	color:#000
+    }
+
+    .markdown-body{
+	font-size: 120% ! important;
+        max-width:800px;
+    }
+    .container{
+       font-size: 110% ! important;
+    }
+    html,body,.container{
+      font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif ! important;
+    }
+    .markdown-body pre code{
+        font-size: 20px;
+        line-height: 24px;
+    }
+</style>
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+<script>
+
+var bar = $(window).height() - $('.navbar ').height() - $('.page-toc').position().top;
+var count =  bar/26/2;
+var barHeight = $('.page-toc').outerHeight();
+$('.page-toc li').eq(0).children('a').addClass('red');
+var arr = [];
+$("h2,h3").each(function () {
+    arr.push($(this).position().top);
+});
+if(!($(window).height()-50 > barHeight)){
+    var flagTop = true;
+}
+function dark(){
+    var top =  Math.abs($('.page-toc > ul').position().top);
+    var cur = $(document).scrollTop();
+    for(var i = arr.length; i >=0;i--){
+        if(arr[i]<=cur){
+            break;
+        }
+    }
+    if(i===-1){
+        i = 0;
+    }
+    $('.page-toc li a').removeClass('red');
+    $('.page-toc li').eq(i).children('a').addClass('red');
+    if(flagTop){
+      if(i> arr.length-count){
+          $(' .page-toc > ul').css('top',-(barHeight-bar));
+          return;
+      }
+      if(i>count){
+          $(' .page-toc > ul').css('top',-26*(i-count));
+      }else{
+          $(' .page-toc > ul').css('top',0);
+      }
+    }
+}
+$(window).on('scroll',dark);
+</script>
+</body>
+</html>
